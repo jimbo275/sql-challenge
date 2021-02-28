@@ -1,6 +1,6 @@
 ﻿-- Create the titles table, with a primary id and a title
 CREATE TABLE titles (
-   title_id PRIMARY KEY,
+   title_id VARCHAR(30) PRIMARY KEY,
    title VARCHAR(30)
 );
 
@@ -15,8 +15,8 @@ CREATE TABLE titles (
 -- set the foreign key and primary key relationships accordingly
 
 CREATE TABLE employees (
-   emp_no INTEGER(30) PRIMARY KEY,
-   emp_title_id REFERENCES titles(title_id),
+   emp_no VARCHAR(30) PRIMARY KEY,
+   emp_title_id VARCHAR(30) REFERENCES titles(title_id),
    birth_date VARCHAR(30),
    first_name VARCHAR(30),
    last_name VARCHAR(30),
